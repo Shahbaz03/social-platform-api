@@ -17,6 +17,14 @@ To Run the Appliation
 3. java -jar <snapshot>
 ```
 
+To Run the Application on any IDE
+```bash
+1. Please Clone the repo
+2. Open the Repo in any IDE
+3. Run the SocialPlatformServiceStarter.java file
+```
+
+
 Access the swagger at
 
 ```bash
