@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void postStatus(PostStatusDO postStatusDO) {
         if (postStatusDO.getStatus().length() > Max_Limit) {
-            logger.error("invalid post. post status is greater than 140 char");
+            logger.error("invalid post. post status is greater than 140 chars");
             throw new InvalidPostException("status post should be within 140 characters");
         }
         User user = getUser(postStatusDO.getEmailId());
