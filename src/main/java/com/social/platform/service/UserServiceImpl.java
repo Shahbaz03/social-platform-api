@@ -22,13 +22,14 @@ import java.util.stream.Collectors;
 @Component
 public class UserServiceImpl implements UserService {
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+    private static final int Max_Limit = 140;
 
     @Autowired
     private UserRepository userRepository;
 
     @Override
     public void postStatus(PostStatusDO postStatusDO) {
-        if (postStatusDO.getStatus().length() > 140) {
+        if (postStatusDO.getStatus().length() > Max_Limit) {
             logger.error("invalid post. post status is greater than 140 char");
             throw new InvalidPostException("status post should be within 140 characters");
         }

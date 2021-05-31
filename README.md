@@ -34,17 +34,17 @@ http://localhost:8080/swagger-ui.html
 APIs currently Implemented
 
 ```bash
-POST /users - Create User
+POST /api/users - Create User
 
-GET /users - Fetch All Users
+GET /api/users - Fetch All Users
 
-GET /users/{emailId} - Fetch Specific User
+GET /api/users/{emailId} - Fetch Specific User
 
-POST /status - Post a Status Update
+POST /api/status - Post a Status Update
 
-POST /follow - Follow a User
+POST /api/follow - Follow a User
 
-GET /users/{emailId}/timeline - Get Posts of Followed Users
+GET /api/users/{emailId}/timeline - Get Posts of Followed Users
 ```
 
 Things Left to Do
@@ -55,3 +55,4 @@ Things Left to Do
 Scope for Improvement
 
 1. Exception Handling
+2. Currently, the APIs depends on the emailId to carry on user specific tasks. In an ideal scenario there should be a unique username for every user.
